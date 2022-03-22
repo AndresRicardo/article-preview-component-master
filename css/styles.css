@@ -1,16 +1,26 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   width: 100%;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Manrope", sans-serif;
   font-size: 13px;
   background-color: #ecf2f8;
@@ -18,95 +28,218 @@ body {
 
 #card {
   width: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-radius: 15px;
-  box-shadow: 0px 0px 50px #9eafc2;
+  -webkit-box-shadow: 0px 0px 50px #9eafc2;
+          box-shadow: 0px 0px 50px #9eafc2;
   background-color: white;
   overflow: hidden;
 }
+
 #card #hero {
   width: 100%;
   height: 200px;
   margin-bottom: 10px;
 }
+
 #card #hero img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
+
 #card #content {
   width: 85%;
   margin: 25px 0px;
 }
+
 #card #content #cardTitle {
   margin-bottom: 12px;
   font-size: 1.3em;
   color: #48556a;
   line-height: 1.5em;
 }
+
 #card #content #cardDescription {
   color: #6d7f97;
   line-height: 1.5em;
 }
+
 #card #contact {
   width: 85%;
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition-property: font-size width height;
+  transition-property: font-size width height;
 }
+
 #card #contact #avatar {
   width: 40px;
   height: 40px;
-  border-radius: 20px;
+  border-radius: 80px;
   margin-right: 15px;
   overflow: hidden;
 }
+
 #card #contact #avatar img {
   width: 100%;
 }
+
 #card #contact #avatarND #avatarName {
   color: #48556a;
   font-weight: 700;
 }
+
 #card #contact #avatarND #avatarDate {
   color: #9eafc2;
 }
-#card #contact #shareIco {
-  width: 30px;
-  height: 30px;
+
+#card #contact #shareIcon {
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: start;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 20px;
   margin-left: auto;
   background-color: #ecf2f8;
+  cursor: pointer;
 }
+
+#card #contact #shareIcon img {
+  width: 100%;
+}
+
+#card #contact #shareIcon:hover {
+  width: 25px;
+  height: 25px;
+}
+
+#card #contact #shareIcon:active {
+  width: 20px;
+  height: 20px;
+}
+
+#card #contact:hover {
+  -webkit-transition-property: font-size width height;
+  transition-property: font-size width height;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  width: 88%;
+  font-size: 1.05em;
+}
+
 #card #sharePannel {
   width: 100%;
   height: 60px;
   padding: 0px 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #48556a;
   display: none;
 }
+
 #card #sharePannel #shareText {
   margin-right: 13px;
   letter-spacing: 0.5em;
   color: #9eafc2;
 }
+
+#card #sharePannel #social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 #card #sharePannel .brands {
   margin-right: 13px;
+  -webkit-transition-property: background-color width height;
+  transition-property: background-color width height;
 }
-#card #sharePannel #share {
+
+#card #sharePannel .brands img:hover {
+  -webkit-transition-property: background-color width height;
+  transition-property: background-color width height;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  width: 30px;
+}
+
+#card #sharePannel #shareIcon2 {
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 20px;
   margin-left: auto;
+  cursor: pointer;
+}
+
+#card #sharePannel #shareIcon2 img {
+  width: 100%;
+}
+
+#card #sharePannel #shareIcon2:hover {
+  width: 25px;
+  height: 25px;
+}
+
+#card #sharePannel #shareIcon2:active {
+  width: 20px;
+  height: 20px;
 }
 
 .attribution {
@@ -121,5 +254,4 @@ body {
   color: #48556a;
   text-decoration: none;
 }
-
 /*# sourceMappingURL=styles.css.map */

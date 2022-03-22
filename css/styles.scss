@@ -84,10 +84,12 @@ body {
         width: 85%;
         margin-bottom: 20px;
         @include flexRow();
+        transition-property: font-size width height;
+
         #avatar {
             width: 40px;
             height: 40px;
-            border-radius: 20px;
+            border-radius: 80px;
             margin-right: 15px;
             overflow: hidden;
             img {
@@ -103,15 +105,33 @@ body {
                 color: $colorGrayishBlue;
             }
         }
-        #shareIco {
-            width: 30px;
-            height: 30px;
+        #shareIcon {
+            width: 20px;
+            height: 20px;
             @include flexRow();
             justify-content: center;
             border-radius: 20px;
             margin-left: auto;
             background-color: $colorLightGrayishBlue;
+            cursor: pointer;
+            img {
+                width: 100%;
+            }
         }
+        #shareIcon:hover {
+            width: 25px;
+            height: 25px;
+        }
+        #shareIcon:active {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    #contact:hover {
+        transition-property: font-size width height;
+        transition-duration: 0.4s;
+        width: 88%;
+        font-size: 1.05em;
     }
 
     #sharePannel {
@@ -120,6 +140,7 @@ body {
         padding: 0px 8%;
         @include flexRow();
         background-color: $colorVeryDarkGrayishBlue;
+
         display: none;
 
         #shareText {
@@ -127,11 +148,38 @@ body {
             letter-spacing: 0.5em;
             color: $colorGrayishBlue;
         }
+        #social {
+            display: flex;
+            align-items: flex-start;
+        }
         .brands {
             margin-right: 13px;
+            transition-property: background-color width height;
         }
-        #share {
+        .brands img:hover {
+            transition-property: background-color width height;
+            transition-duration: 0.4s;
+            width: 30px;
+        }
+        #shareIcon2 {
+            width: 20px;
+            height: 20px;
+            @include flexRow();
+            justify-content: center;
+            border-radius: 20px;
             margin-left: auto;
+            cursor: pointer;
+            img {
+                width: 100%;
+            }
+        }
+        #shareIcon2:hover {
+            width: 25px;
+            height: 25px;
+        }
+        #shareIcon2:active {
+            width: 20px;
+            height: 20px;
         }
     }
 }
