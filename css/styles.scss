@@ -115,7 +115,7 @@ body {
             background-color: $colorLightGrayishBlue;
             cursor: pointer;
             img {
-                width: 100%;
+                width: 80%;
             }
         }
         #shareIcon:hover {
@@ -153,13 +153,22 @@ body {
             align-items: flex-start;
         }
         .brands {
+            width: 25px;
+            height: 25px;
             margin-right: 13px;
-            transition-property: background-color width height;
+            transition-property: width height;
+        }
+
+        .brands img {
+            width: 20px;
+            height: 20px;
+            transition-property: width height;
         }
         .brands img:hover {
-            transition-property: background-color width height;
-            transition-duration: 0.4s;
-            width: 30px;
+            transition-property: width height;
+            transition-duration: 0.3s;
+            width: 25px;
+            height: 25px;
         }
         #shareIcon2 {
             width: 20px;
@@ -170,7 +179,7 @@ body {
             margin-left: auto;
             cursor: pointer;
             img {
-                width: 100%;
+                width: 80%;
             }
         }
         #shareIcon2:hover {

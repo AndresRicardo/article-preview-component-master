@@ -140,7 +140,7 @@ body {
 }
 
 #card #contact #shareIcon img {
-  width: 100%;
+  width: 80%;
 }
 
 #card #contact #shareIcon:hover {
@@ -195,17 +195,27 @@ body {
 }
 
 #card #sharePannel .brands {
+  width: 25px;
+  height: 25px;
   margin-right: 13px;
-  -webkit-transition-property: background-color width height;
-  transition-property: background-color width height;
+  -webkit-transition-property: width height;
+  transition-property: width height;
+}
+
+#card #sharePannel .brands img {
+  width: 20px;
+  height: 20px;
+  -webkit-transition-property: width height;
+  transition-property: width height;
 }
 
 #card #sharePannel .brands img:hover {
-  -webkit-transition-property: background-color width height;
-  transition-property: background-color width height;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-  width: 30px;
+  -webkit-transition-property: width height;
+  transition-property: width height;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  width: 25px;
+  height: 25px;
 }
 
 #card #sharePannel #shareIcon2 {
@@ -229,7 +239,7 @@ body {
 }
 
 #card #sharePannel #shareIcon2 img {
-  width: 100%;
+  width: 80%;
 }
 
 #card #sharePannel #shareIcon2:hover {
