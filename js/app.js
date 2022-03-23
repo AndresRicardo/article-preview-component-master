@@ -1,4 +1,5 @@
 const contact = document.getElementById("contact");
+const popover = document.getElementById("popover");
 const shareIcon = document.getElementById("shareIcon");
 const sharePannel = document.getElementById("sharePannel");
 const shareIcon2 = document.getElementById("shareIcon2");
@@ -18,6 +19,7 @@ const pageHeight = document.documentElement.scrollHeight;
 function showContact() {
     contact.style.display = "flex";
     sharePannel.style.display = "none";
+    popover.style.display = "none";
 }
 
 function showSharePannel() {
@@ -28,14 +30,15 @@ function showSharePannel() {
 shareIcon.addEventListener("click", (event) => {
     const pageWidth = document.documentElement.scrollWidth;
     if (pageWidth < 375) showSharePannel();
-    else console.log("mostrar el cuadrito ese");
+    else {
+        console.log("mostrar el cuadrito ese");
+        popover.style.display = "flex";
+    }
 });
 
 document.addEventListener("click", (event) => {
     const pageWidth = document.documentElement.scrollWidth;
     if (
-        pageWidth < 375 &&
-        contact.style.display === "none" &&
         event.target.id !== "sharePannel" &&
         event.target.id !== "shareIcon" &&
         event.target.id !== "shareIconImg" &&
@@ -48,11 +51,5 @@ document.addEventListener("click", (event) => {
 });
 
 shareIcon2.addEventListener("click", (event) => {
-    const pageWidth = document.documentElement.scrollWidth;
-    if (pageWidth < 375) {
-        showContact();
-    } else {
-        console.log(`ancho pantalla: ${pageWidth}px > 375px
-        mostrar el cuadrito ese`);
-    }
+    showContact();
 });

@@ -48,13 +48,15 @@ body {
   -webkit-box-shadow: 0px 0px 50px #9eafc2;
           box-shadow: 0px 0px 50px #9eafc2;
   background-color: white;
-  overflow: hidden;
 }
 
 #card #hero {
   width: 100%;
   height: 200px;
   margin-bottom: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  overflow: hidden;
 }
 
 #card #hero img {
@@ -95,6 +97,82 @@ body {
           align-items: center;
   -webkit-transition-property: font-size width height;
   transition-property: font-size width height;
+  position: relative;
+}
+
+#card #contact #popover {
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #48556a;
+  position: absolute;
+  top: -175%;
+  right: -36%;
+  display: none;
+}
+
+#card #contact #popover #popText {
+  margin: 15px 7px 15px 20px;
+  letter-spacing: 0.5em;
+  color: #9eafc2;
+}
+
+#card #contact #popover #popSocial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#card #contact #popover #popSocial .brands {
+  width: 25px;
+  height: 25px;
+  margin: 15px 7px;
+  -webkit-transition-property: width height;
+  transition-property: width height;
+}
+
+#card #contact #popover #popSocial .brands img {
+  width: 20px;
+  height: 20px;
+  -webkit-transition-property: width height;
+  transition-property: width height;
+}
+
+#card #contact #popover #popSocial .brands img:hover {
+  -webkit-transition-property: width height;
+  transition-property: width height;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  width: 25px;
+  height: 25px;
+}
+
+#card #contact #popover #popSocial #pinterest {
+  margin-right: 13px;
+}
+
+#card #contact #popover .colita {
+  border: 15px solid;
+  border-top-color: #48556a;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  position: absolute;
+  bottom: -30px;
+  left: calc(50%-15px);
 }
 
 #card #contact #avatar {
@@ -119,8 +197,8 @@ body {
 }
 
 #card #contact #shareIcon {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,17 +218,17 @@ body {
 }
 
 #card #contact #shareIcon img {
-  width: 80%;
+  width: 70%;
 }
 
 #card #contact #shareIcon:hover {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
 }
 
 #card #contact #shareIcon:active {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 #card #contact:hover {
@@ -219,8 +297,8 @@ body {
 }
 
 #card #sharePannel #shareIcon2 {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,17 +317,25 @@ body {
 }
 
 #card #sharePannel #shareIcon2 img {
-  width: 80%;
+  width: 70%;
+  -webkit-transition-property: width height;
+  transition-property: width height;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 #card #sharePannel #shareIcon2:hover {
-  width: 25px;
-  height: 25px;
+  -webkit-transition-property: width height;
+  transition-property: width height;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  width: 35px;
+  height: 35px;
 }
 
 #card #sharePannel #shareIcon2:active {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 .attribution {
