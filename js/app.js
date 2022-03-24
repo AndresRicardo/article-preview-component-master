@@ -8,7 +8,7 @@ contact.style.display = "flex";
 sharePannel.style.display = "none";
 popover.style.display = "none";
 
-const screenSizeBreakpoint1 = 375;
+const screenSizeBreakpoint1 = 900;
 
 // Get the size of the device screen
 let screenWidth = screen.width;
